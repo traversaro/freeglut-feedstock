@@ -20,12 +20,12 @@ requirements:
 test:
   commands:
     # Test includes.
-    - test -d "${PREFIX}/include/GL"
+    - test -d "${PREFIX}/include/GL" # [linux]
 
       # Test libraries.
-    - test -f "${PREFIX}/lib/libglut.a"
-    - test -f "${PREFIX}/lib/libglut.so"
-    - ldd "${PREFIX}/lib/libglut.so"
+    - test -f "${PREFIX}/lib/libglut.a" # [linux]
+    - test -f "${PREFIX}/lib/libglut.so" # [linux]
+    - ldd "${PREFIX}/lib/libglut.so" # [linux]
 
 about:
   home: http://freeglut.sourceforge.net/
