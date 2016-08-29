@@ -12,3 +12,5 @@ cmake ^
 	-DCMAKE_INSTALL_INCLUDEDIR=%LIBRARY_INC% ^
 	-DFREEGLUT_BUILD_DEMOS=OFF               ^
 	..
+
+cmake --build . --config Release --target INSTALL
