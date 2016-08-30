@@ -20,7 +20,7 @@ requirements:
 
 test:
   requires:
-    python {{ environ['PY_VER'] + '*' }}  # [win]
+    - python {{ environ['PY_VER'] + '*' }}  # [win]
   commands:
     # Test includes.
     - test -d "${PREFIX}/include/GL"  # [linux]
