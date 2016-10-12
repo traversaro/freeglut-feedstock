@@ -10,7 +10,7 @@ source:
   md5: 90c3ca4dd9d51cf32276bc5344ec9754
 
 build:
-  number: 3
+  number: 4
   skip: true                      # [osx]
   features:
       - vc9    # [win and py27]
@@ -45,6 +45,7 @@ test:
 about:
   home: http://freeglut.sourceforge.net/
   license: MIT
+  license_family: MIT
   license_file: COPYING
   summary: A GUI based on OpenGL.
 
