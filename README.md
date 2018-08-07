@@ -11,6 +11,20 @@ Summary: A GUI based on OpenGL.
 
 
 
+Current build status
+====================
+
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/freeglut-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/freeglut-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/freeglut-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/freeglut-feedstock/branch/master)
+![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
+
+Current release info
+====================
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-freeglut-green.svg)](https://anaconda.org/conda-forge/freeglut) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/freeglut.svg)](https://anaconda.org/conda-forge/freeglut) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/freeglut.svg)](https://anaconda.org/conda-forge/freeglut) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/freeglut.svg)](https://anaconda.org/conda-forge/freeglut) |
+
 Installing freeglut
 ===================
 
@@ -31,7 +45,6 @@ It is possible to list all of the versions of `freeglut` available on your platf
 ```
 conda search freeglut --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -55,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -67,18 +81,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/freeglut-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/freeglut-feedstock)
-OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/freeglut-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/freeglut-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/freeglut/badges/version.svg)](https://anaconda.org/conda-forge/freeglut)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/freeglut/badges/downloads.svg)](https://anaconda.org/conda-forge/freeglut)
 
 
 Updating freeglut-feedstock
