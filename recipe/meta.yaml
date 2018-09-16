@@ -10,21 +10,17 @@ source:
   md5: 90c3ca4dd9d51cf32276bc5344ec9754
 
 build:
-  number: 4
+  number: 5
   skip: true                      # [osx]
-  features:
-      - vc9    # [win and py27]
-      - vc10   # [win and py34]
-      - vc14   # [win and py35]
 
 requirements:
   build:
     - cmake
-    - python  # [win]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
 
 test:
-  requires:
-    - python {{ environ['PY_VER'] + '*' }}  # [win]
   commands:
     # Test includes.
     - test -d "${PREFIX}/include/GL"  # [linux]
@@ -33,7 +29,7 @@ test:
     - test -f "${PREFIX}/lib/libglut.a"   # [linux]
     - test -f "${PREFIX}/lib/libglut.so"  # [linux]
     - ldd "${PREFIX}/lib/libglut.so"      # [linux]
-    
+
     # Test Windows includes and libraries.
     - if not exist %LIBRARY_INC%\\GL\\freeglut.h     exit 1   # [win]
     - if not exist %LIBRARY_INC%\\GL\\freeglut_ext.h exit 1   # [win]
