@@ -10,7 +10,7 @@ source:
   md5: 90c3ca4dd9d51cf32276bc5344ec9754
 
 build:
-  number: 5
+  number: 1005
   skip: true                      # [osx]
 
 requirements:
