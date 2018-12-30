@@ -19,7 +19,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - {{ cdt('libxxf86vm-devel') }}      # [linux]
   host:
     - libglu                             # [linux]
@@ -29,6 +28,7 @@ requirements:
     - xorg-libxext                       # [linux]
     - xorg-libxfixes                     # [linux]
     - xorg-libxi                         # [linux]
+    - xorg-xproto                        # [linux]
   run:
     - libxcb                             # [linux]
     - xorg-libx11                        # [linux]
@@ -36,6 +36,7 @@ requirements:
     - xorg-libxext                       # [linux]
     - xorg-libxfixes                     # [linux]
     - xorg-libxi                         # [linux]
+    - xorg-xproto                        # [linux]
 
 test:
   commands:
