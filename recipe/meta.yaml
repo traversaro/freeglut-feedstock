@@ -18,7 +18,6 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ cdt('libxfixes-devel') }}       # [linux]
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - {{ cdt('libxxf86vm-devel') }}      # [linux]
@@ -28,12 +27,14 @@ requirements:
     - xorg-libx11                        # [linux]
     - xorg-libxau                        # [linux]
     - xorg-libxext                       # [linux]
+    - xorg-libxfixes                     # [linux]
     - xorg-libxi                         # [linux]
   run:
     - libxcb                             # [linux]
     - xorg-libx11                        # [linux]
     - xorg-libxau                        # [linux]
     - xorg-libxext                       # [linux]
+    - xorg-libxfixes                     # [linux]
     - xorg-libxi                         # [linux]
 
 test:
