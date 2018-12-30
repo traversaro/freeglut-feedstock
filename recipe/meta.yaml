@@ -18,7 +18,6 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ cdt('libxau-devel') }}          # [linux]
     - {{ cdt('libxext-devel') }}         # [linux]
     - {{ cdt('libxfixes-devel') }}       # [linux]
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
@@ -28,10 +27,12 @@ requirements:
     - libglu                             # [linux]
     - libxcb                             # [linux]
     - xorg-libx11                        # [linux]
+    - xorg-libxau                        # [linux]
     - xorg-libxi                         # [linux]
   run:
     - libxcb                             # [linux]
     - xorg-libx11                        # [linux]
+    - xorg-libxau                        # [linux]
     - xorg-libxi                         # [linux]
 
 test:
