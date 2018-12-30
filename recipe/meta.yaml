@@ -18,7 +18,6 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ cdt('libxcb') }}                # [linux]
     - {{ cdt('libxi-devel') }}           # [linux]
     - {{ cdt('libx11-devel') }}          # [linux]
     - {{ cdt('libxau-devel') }}          # [linux]
@@ -29,6 +28,9 @@ requirements:
     - {{ cdt('libxxf86vm-devel') }}      # [linux]
   host:
     - libglu                             # [linux]
+    - libxcb                             # [linux]
+  run:
+    - libxcb                             # [linux]
 
 test:
   commands:
