@@ -18,7 +18,6 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ cdt('libx11-devel') }}          # [linux]
     - {{ cdt('libxau-devel') }}          # [linux]
     - {{ cdt('libxext-devel') }}         # [linux]
     - {{ cdt('libxfixes-devel') }}       # [linux]
@@ -28,9 +27,11 @@ requirements:
   host:
     - libglu                             # [linux]
     - libxcb                             # [linux]
+    - xorg-libx11                        # [linux]
     - xorg-libxi                         # [linux]
   run:
     - libxcb                             # [linux]
+    - xorg-libx11                        # [linux]
     - xorg-libxi                         # [linux]
 
 test:
