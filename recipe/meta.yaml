@@ -10,7 +10,7 @@ source:
   md5: 90c3ca4dd9d51cf32276bc5344ec9754
 
 build:
-  number: 5
+  number: 1005
   skip: true                      # [osx]
 
 requirements:
@@ -18,7 +18,24 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ cdt('mesa-libgl-devel') }}      # [linux]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - {{ cdt('libxxf86vm-devel') }}      # [linux]
   host:
+    - libglu                             # [linux]
+    - libxcb                             # [linux]
+    - xorg-libx11                        # [linux]
+    - xorg-libxau                        # [linux]
+    - xorg-libxext                       # [linux]
+    - xorg-libxfixes                     # [linux]
+    - xorg-libxi                         # [linux]
+  run:
+    - libxcb                             # [linux]
+    - xorg-libx11                        # [linux]
+    - xorg-libxau                        # [linux]
+    - xorg-libxext                       # [linux]
+    - xorg-libxfixes                     # [linux]
+    - xorg-libxi                         # [linux]
 
 test:
   commands:
