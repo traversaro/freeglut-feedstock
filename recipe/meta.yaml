@@ -21,31 +21,32 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - {{ cdt('libxxf86vm-devel') }}      # [linux]
+    - make                               # [unix]
   host:
-    - libglu                             # [linux]
-    - libxcb                             # [linux]
-    - xorg-libx11                        # [linux]
-    - xorg-libxau                        # [linux]
-    - xorg-libxext                       # [linux]
-    - xorg-libxfixes                     # [linux]
-    - xorg-libxi                         # [linux]
+    - libglu                             # [unix]
+    - libxcb                             # [unix]
+    - xorg-libx11                        # [unix]
+    - xorg-libxau                        # [unix]
+    - xorg-libxext                       # [unix]
+    - xorg-libxfixes                     # [unix]
+    - xorg-libxi                         # [unix]
   run:
-    - libxcb                             # [linux]
-    - xorg-libx11                        # [linux]
-    - xorg-libxau                        # [linux]
-    - xorg-libxext                       # [linux]
-    - xorg-libxfixes                     # [linux]
-    - xorg-libxi                         # [linux]
+    - libxcb                             # [unix]
+    - xorg-libx11                        # [unix]
+    - xorg-libxau                        # [unix]
+    - xorg-libxext                       # [unix]
+    - xorg-libxfixes                     # [unix]
+    - xorg-libxi                         # [unix]
 
 test:
   commands:
     # Test includes.
-    - test -d "${PREFIX}/include/GL"  # [linux]
+    - test -d "${PREFIX}/include/GL"  # [unix]
 
       # Test libraries.
-    - test -f "${PREFIX}/lib/libglut.a"   # [linux]
-    - test -f "${PREFIX}/lib/libglut.so"  # [linux]
-    - ldd "${PREFIX}/lib/libglut.so"      # [linux]
+    - test -f "${PREFIX}/lib/libglut.a"   # [unix]
+    - test -f "${PREFIX}/lib/libglut.so"  # [unix]
+    - ldd "${PREFIX}/lib/libglut.so"      # [unix]
 
     # Test Windows includes and libraries.
     - if not exist %LIBRARY_INC%\\GL\\freeglut.h     exit 1   # [win]
