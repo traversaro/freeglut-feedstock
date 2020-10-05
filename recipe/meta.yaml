@@ -1,4 +1,4 @@
-{% set version = "3.0.0" %}
+{% set version = "3.2.1" %}
 
 package:
   name: freeglut
@@ -7,21 +7,20 @@ package:
 source:
   fn: freeglut-{{ version }}.tar.bz2
   url: http://sourceforge.net/projects/freeglut/files/freeglut/{{ version }}/freeglut-{{ version }}.tar.gz
-  md5: 90c3ca4dd9d51cf32276bc5344ec9754
+  sha256: d4000e02102acaf259998c870e25214739d1f16f67f99cb35e4f46841399da68
 
 build:
-  number: 1005
-  skip: true                      # [osx]
+  number: 0
 
 requirements:
   build:
-    - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - cmake
+    - make                               # [unix]
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - {{ cdt('libxxf86vm-devel') }}      # [linux]
-    - make                               # [unix]
   host:
     - libglu                             # [unix]
     - libxcb                             # [unix]
