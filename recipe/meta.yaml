@@ -12,41 +12,45 @@ source:
 build:
   number: 0
   skip: true  # [osx]
+  run_exports:
+    # https://abi-laboratory.pro/index.php?view=timeline&l=freeglut
+    # very good backwards compatibility
+    - {{ pin_subpackage("freeglut", max_pin="x") }}
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - make                               # [unix]
+    - make                               # [linux]
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - {{ cdt('libxxf86vm-devel') }}      # [linux]
   host:
-    - libglu                             # [unix]
-    - libxcb                             # [unix]
-    - xorg-libx11                        # [unix]
-    - xorg-libxau                        # [unix]
-    - xorg-libxext                       # [unix]
-    - xorg-libxfixes                     # [unix]
-    - xorg-libxi                         # [unix]
+    - libglu                             # [linux]
+    - libxcb                             # [linux]
+    - xorg-libx11                        # [linux]
+    - xorg-libxau                        # [linux]
+    - xorg-libxext                       # [linux]
+    - xorg-libxfixes                     # [linux]
+    - xorg-libxi                         # [linux]
   run:
-    - libxcb                             # [unix]
-    - xorg-libx11                        # [unix]
-    - xorg-libxau                        # [unix]
-    - xorg-libxext                       # [unix]
-    - xorg-libxfixes                     # [unix]
-    - xorg-libxi                         # [unix]
+    - libxcb                             # [linux]
+    - xorg-libx11                        # [linux]
+    - xorg-libxau                        # [linux]
+    - xorg-libxext                       # [linux]
+    - xorg-libxfixes                     # [linux]
+    - xorg-libxi                         # [linux]
 
 test:
   commands:
     # Test includes.
-    - test -d "${PREFIX}/include/GL"  # [unix]
+    - test -d "${PREFIX}/include/GL"  # [linux]
 
       # Test libraries.
-    - test ! -f "${PREFIX}/lib/libglut.a"   # [unix]
-    - test -f "${PREFIX}/lib/libglut.so"    # [unix]
-    - ldd "${PREFIX}/lib/libglut.so"        # [unix]
+    - test ! -f "${PREFIX}/lib/libglut.a"   # [linux]
+    - test -f "${PREFIX}/lib/libglut.so"    # [linux]
+    - ldd "${PREFIX}/lib/libglut.so"        # [linux]
 
     # Test Windows includes and libraries.
     - if not exist %LIBRARY_INC%\\GL\\freeglut.h     exit 1   # [win]
@@ -67,3 +71,4 @@ extra:
   recipe-maintainers:
     - jakirkham
     - shadowwalkersb
+    - wolfv
