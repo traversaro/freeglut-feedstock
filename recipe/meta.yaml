@@ -44,9 +44,9 @@ test:
     - test -d "${PREFIX}/include/GL"  # [unix]
 
       # Test libraries.
-    - test -f "${PREFIX}/lib/libglut.a"   # [unix]
-    - test -f "${PREFIX}/lib/libglut.so"  # [unix]
-    - ldd "${PREFIX}/lib/libglut.so"      # [unix]
+    - test ! -f "${PREFIX}/lib/libglut.a"   # [unix]
+    - test -f "${PREFIX}/lib/libglut.so"    # [unix]
+    - ldd "${PREFIX}/lib/libglut.so"        # [unix]
 
     # Test Windows includes and libraries.
     - if not exist %LIBRARY_INC%\\GL\\freeglut.h     exit 1   # [win]
