@@ -50,6 +50,7 @@ test:
     - {{ compiler('c') }}
     - cmake
     - ninja
+    - {{ cdt('mesa-libgl-devel') }}      # [linux]
 
   commands:
     # Test includes.
