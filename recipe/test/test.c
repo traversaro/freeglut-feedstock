@@ -1,4 +1,6 @@
 #include <GL/glut.h>
+// For GLUT_INIT_STATE
+#include <GL/freeglut_ext.h>
 
 int main()
 {
