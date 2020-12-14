@@ -43,6 +43,14 @@ requirements:
     - xorg-libxi                         # [linux]
 
 test:
+  files:
+    - test
+
+  requires:
+    - {{ compiler('c') }}
+    - cmake
+    - ninja
+
   commands:
     # Test includes.
     - test -d "${PREFIX}/include/GL"  # [linux]
