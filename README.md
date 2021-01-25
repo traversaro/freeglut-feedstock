@@ -170,4 +170,5 @@ Feedstock Maintainers
 
 * [@jakirkham](https://github.com/jakirkham/)
 * [@shadowwalkersb](https://github.com/shadowwalkersb/)
+* [@wolfv](https://github.com/wolfv/)
 
