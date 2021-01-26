@@ -60,6 +60,11 @@ test:
     - xorg-libxext                       # [linux]
     - xorg-libxfixes                     # [linux]
     - xorg-libxi                         # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('libselinux') }}  # [linux]
+    - {{ cdt('libxdamage') }}  # [linux]
+    - {{ cdt('libxext') }}     # [linux]
+    - xorg-libxfixes  # [linux]
 
   commands:
     # Test includes.
