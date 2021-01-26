@@ -10,7 +10,7 @@ source:
   sha256: d4000e02102acaf259998c870e25214739d1f16f67f99cb35e4f46841399da68
 
 build:
-  number: 0
+  number: 1
   skip: true  # [osx]
   run_exports:
     # https://abi-laboratory.pro/index.php?view=timeline&l=freeglut
@@ -60,11 +60,11 @@ test:
     - xorg-libxext                       # [linux]
     - xorg-libxfixes                     # [linux]
     - xorg-libxi                         # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
-    - xorg-libxfixes  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}      # [linux]
+    - {{ cdt('libselinux') }}            # [linux]
+    - {{ cdt('libxdamage') }}            # [linux]
+    - {{ cdt('libxext') }}               # [linux]
+    - xorg-libxfixes                     # [linux]
 
   commands:
     # Test includes.
