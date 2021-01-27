@@ -13,7 +13,7 @@ target_link_libraries(test2 PRIVATE ${GLUT_LIBRARIES})
 
 if(WIN32)
   # Try to link against freeglut.lib
-  set(FREEGLUT_LIBRARY "$ENV{PREFIX}\Library\lib\freeglut.lib")
+  set(FREEGLUT_LIBRARY "$ENV{PREFIX}/Library/lib/freeglut.lib")
   add_executable(test3 test.c)
   target_include_directories(test3 PRIVATE ${GLUT_INCLUDE_DIR})
   target_link_libraries(test3 PRIVATE ${FREEGLUT_LIBRARY})
